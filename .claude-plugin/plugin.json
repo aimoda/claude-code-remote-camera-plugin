@@ -18,5 +18,13 @@
     "photography",
     "electronics"
   ],
-  "mcpServers": "./.mcp.json"
+  "mcpServers": {
+    "remote-camera": {
+      "url": "https://www.ai.moda/mcp-servers/remote-camera/mcp",
+      "transport": "streamable-http",
+      "headers": {
+        "Authorization": "Bearer ${REMOTE_CAMERA_AUTH_TOKEN}"
+      }
+    }
+  }
 }

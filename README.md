@@ -56,16 +56,40 @@ $env:REMOTE_CAMERA_AUTH_TOKEN = "eyJzM1VybCI6Imh0dHBzOi8v..."
 
 ### Step 3: Install Plugin
 
-From the ai.moda marketplace:
+**From the ai.moda marketplace:**
 ```
 /plugin marketplace add aimoda/claude-code-plugin-marketplace
 /plugin install remote-camera@aimoda
 ```
 
-For local development:
-1. Clone or copy this plugin to your local machine
-2. Add the plugin directory to your Claude Code settings
-3. Restart Claude Code
+**For local development:**
+
+Test the local version during development:
+
+```bash
+# First, validate the plugin structure
+claude plugin validate .
+
+# Uninstall production version (if installed)
+/plugin uninstall remote-camera@aimoda
+/plugin marketplace remove aimoda
+
+# Add local marketplace
+/plugin marketplace add /path/to/claude-code-remote-camera-plugin
+
+# Install from local marketplace
+/plugin install remote-camera@remote-camera-dev
+```
+
+After making changes to the plugin, uninstall and remove the marketplace, then re-add and reinstall:
+```
+/plugin uninstall remote-camera@remote-camera-dev
+/plugin marketplace remove remote-camera-dev
+/plugin marketplace add /path/to/claude-code-remote-camera-plugin
+/plugin install remote-camera@remote-camera-dev
+```
+
+Then restart Claude Code to load the updated plugin.
 
 ## Usage
 

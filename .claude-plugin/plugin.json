@@ -1,0 +1,22 @@
+{
+  "name": "remote-camera",
+  "version": "1.0.0",
+  "description": "Capture and analyze photos from mobile devices for hardware debugging, PCB inspection, chip identification, and visual analysis tasks",
+  "author": {
+    "name": "ai.moda",
+    "url": "https://www.ai.moda"
+  },
+  "homepage": "https://www.ai.moda/mcp-servers/remote-camera/",
+  "keywords": [
+    "camera",
+    "hardware",
+    "debugging",
+    "pcb",
+    "inspection",
+    "visual",
+    "mobile",
+    "photography",
+    "electronics"
+  ],
+  "mcpServers": "./.mcp.json"
+}
